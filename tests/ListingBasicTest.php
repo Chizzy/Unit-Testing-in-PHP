@@ -22,4 +22,14 @@ class ListingBasicTest extends TestCase
         $this->expectExceptionMessage('Unable to create a listing, invalid title');
         $listing = new ListingBasic(['id' => 1]);
     }
+    /** @test */
+    function canBeCreatedWithIdAndTitle()
+    {
+        $data = [
+            'id' => 1,
+            'title' => 'Test Title'
+        ];
+        $listing = new ListingBasic($data);
+        $this->assertInstanceOf('ListingBasic', $listing);
+    }
 }
