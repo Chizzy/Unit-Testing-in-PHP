@@ -12,7 +12,7 @@ include __DIR__ . '/../classes/ListingFeatured.php';
 try {
     //create PDO connection
     $db = new PDO("sqlite:".__DIR__."/database.db");
-    $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
     //show error
     echo '<p class="bg-danger">'.$e->getMessage().'</p>';

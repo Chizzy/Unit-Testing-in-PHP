@@ -7,6 +7,7 @@ class ListingBasic
 
     /**
      * ListingBasic constructor.
+     * 
      * @param array $data Initial data to set from user or database
      */
     public function __construct($data = [])
@@ -19,9 +20,11 @@ class ListingBasic
 
     /**
      * Calls individual methods to set values for object properties.
+     * 
      * @param array $data Data to set from user or database
      */
-    public function setValues($data = []) {
+    public function setValues($data = []) 
+    {
         if (!isset($data['id'])) {
             throw new Exception('Unable to create a listing, invalid id');
         }
@@ -49,6 +52,7 @@ class ListingBasic
 
     /**
      * Gets the local property $id
+     * 
      * @return int
      */
     public function getId()
@@ -58,6 +62,7 @@ class ListingBasic
 
     /**
      * Cleans up and sets the local property $id
+     * 
      * @param int $value Data may be from database or user
      */
     public function setId($value)
@@ -67,6 +72,7 @@ class ListingBasic
 
     /**
      * Gets the local property $title
+     * 
      * @return string
      */
     public function getTitle()
@@ -76,6 +82,7 @@ class ListingBasic
 
     /**
      * Cleans up and sets the local property $title
+     * 
      * @param string $value to set property
      */
     public function setTitle($value)
@@ -85,6 +92,7 @@ class ListingBasic
 
     /**
      * Gets the local property $website
+     * 
      * @return string
      */
     public function getWebsite()
@@ -94,6 +102,7 @@ class ListingBasic
 
     /**
      * Cleans up and sets the local property $website
+     * 
      * @param string $value to set property
      */
     public function setWebsite($value)
@@ -111,6 +120,7 @@ class ListingBasic
 
     /**
      * Gets the local property $email
+     * 
      * @return string email address
      */
     public function getEmail()
@@ -120,6 +130,7 @@ class ListingBasic
 
     /**
      * Cleans up and sets the local property $email
+     * 
      * @param string $value to set property
      */
     public function setEmail($value)
@@ -129,6 +140,7 @@ class ListingBasic
 
     /**
      * Gets the local property $twitter
+     * 
      * @return string
      */
     public function getTwitter()
@@ -138,6 +150,7 @@ class ListingBasic
 
     /**
      * Cleans up and sets the local property $twitter
+     * 
      * @param string $value to set property
      */
     public function setTwitter($value)
@@ -147,6 +160,7 @@ class ListingBasic
 
     /**
      * Gets the local property $status
+     * 
      * @return string
      */
     public function getStatus()
@@ -156,6 +170,7 @@ class ListingBasic
 
     /**
      * Cleans up and sets the local property $status
+     * 
      * @param string $value to set property
      */
     public function setStatus($value)
@@ -169,6 +184,7 @@ class ListingBasic
 
     /**
      * Convert the current object to an associative array of parameters
+     * 
      * @return array of object parameters
      */
     public function toArray()

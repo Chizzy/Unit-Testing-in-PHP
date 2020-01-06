@@ -1,5 +1,5 @@
 <?php
-include 'inc/config.php';
+require 'inc/config.php';
 
 $filter = ['status'=>'active'];
 if (isset($_GET['status'])) {

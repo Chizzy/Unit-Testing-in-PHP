@@ -1,5 +1,5 @@
 <?php
-include 'inc/config.php';
+require 'inc/config.php';
 
 if (isset($_POST['id'])) {
     $directory->delete($_POST['id']);

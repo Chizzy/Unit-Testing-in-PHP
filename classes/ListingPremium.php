@@ -8,9 +8,11 @@ class ListingPremium extends ListingBasic
     
     /**
      * Calls individual methods to set values for object properties.
+     * 
      * @param array $data Data to set from user or database
      */
-    public function setValues($data = []) {
+    public function setValues($data = [])
+    {
         parent::setValues($data);
         if (isset($data['description'])) {
             $this->setDescription($data['description']);
@@ -19,6 +21,7 @@ class ListingPremium extends ListingBasic
     
     /**
      * Gets the local property $description
+     * 
      * @return string
      */
     public function getDescription()
@@ -28,6 +31,7 @@ class ListingPremium extends ListingBasic
 
     /**
      * Cleans up and sets the local property $description
+     * 
      * @param string $value to set property
      */
     public function setDescription($value)

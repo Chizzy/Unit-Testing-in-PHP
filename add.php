@@ -1,5 +1,5 @@
 <?php
-include 'inc/config.php';
+require 'inc/config.php';
 
 if ($_POST) {
     if ($directory->insert($_POST) > 0) {

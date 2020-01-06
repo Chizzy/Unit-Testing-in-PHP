@@ -9,6 +9,7 @@ class Collection
 
     /**
      * Collection constructor.
+     * 
      * @param PDO $db Connection to the Database
      */
     function __construct($db)
@@ -18,7 +19,8 @@ class Collection
 
     /**
      * Select listings from the database
-     * @param array $filter Associtive array of columns and values to filter
+     * 
+     * @param  array $filter Associative array of columns and values to filter
      * @return bool If listing inserted true/false
      */
     public function selectListings($filter = null)
@@ -55,7 +57,8 @@ class Collection
 
     /**
      * Add listing to collection
-     * @param array $data User Data or null
+     * 
+     * @param  array $data User Data or null
      * @return object
      */
     public function addListing($data = null)
@@ -75,6 +78,7 @@ class Collection
 
     /**
      * Getter for local property $statuses
+     * 
      * @return array Local property
      */
     public function getStatuses()
@@ -84,7 +88,8 @@ class Collection
 
     /**
      * Insert listing
-     * @param array $data User Data
+     * 
+     * @param  array $data User Data
      * @return bool If listing inserted true/false
      */
     public function insert($data)
@@ -112,7 +117,8 @@ class Collection
 
     /**
      * Update listing
-     * @param array $data User Data
+     * 
+     * @param  array $data User Data
      * @return integer Indicates the number of records updated
      */
     public function update($data)
@@ -147,7 +153,8 @@ class Collection
 
     /**
      * Delete a single listing
-     * @param integer $id ID of the single listing to remove
+     * 
+     * @param  integer $id ID of the single listing to remove
      * @return bool true/false
      */
     public function delete($id)
@@ -177,8 +184,9 @@ class Collection
 
     /**
      * Set alerts to show user
-     * @param string $type Options: primary/success/info/warning/danger
-     * @param string $msg  Message to display
+     * 
+     * @param  string $type Options: primary/success/info/warning/danger
+     * @param  string $msg  Message to display
      * @return null sets super global $_SESSION
      */
     public function setAlert($type, $msg)
@@ -188,6 +196,7 @@ class Collection
 
     /**
      * Get alerts to show user
+     * 
      * @return array
      */
     public function getAlert()
