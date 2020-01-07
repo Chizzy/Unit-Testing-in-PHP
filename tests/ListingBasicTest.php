@@ -50,7 +50,7 @@ class ListingBasicTest extends TestCase
             'title' => 'Test Title'
         ];
         $listing = new ListingBasic($data);
-        $this->assertEquals(1, $listing->getId());
+        $this->assertEquals($data['id'], $listing->getId());
     }
     /** @test */
     function hasTitle()
@@ -60,7 +60,7 @@ class ListingBasicTest extends TestCase
             'title' => 'Test Title'
         ];
         $listing = new ListingBasic($data);
-        $this->assertEquals('Test Title', $listing->getTitle());
+        $this->assertEquals($data['title'], $listing->getTitle());
     }
     /** @test */
     function hasWebsite()
@@ -71,7 +71,7 @@ class ListingBasicTest extends TestCase
             'website' => 'http://testwebsite.com'
         ];
         $listing = new ListingBasic($data);
-        $this->assertEquals('http://testwebsite.com', $listing->getWebsite());
+        $this->assertEquals($data['website'], $listing->getWebsite());
     }
     /** @test */
     function hasEmail()
@@ -82,7 +82,7 @@ class ListingBasicTest extends TestCase
             'email' => 'test@email.com'
         ];
         $listing = new ListingBasic($data);
-        $this->assertEquals('test@email.com', $listing->getEmail());
+        $this->assertEquals($data['email'], $listing->getEmail());
     }
     /** @test */
     function hasTwitter()
