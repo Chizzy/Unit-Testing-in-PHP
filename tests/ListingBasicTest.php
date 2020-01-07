@@ -120,4 +120,48 @@ class ListingBasicTest extends TestCase
             $listing->toArray()
         );
     }
+    /** @test */
+    function createdListingWithoutWebsite()
+    {
+        $data = [
+            'id' => 1,
+            'title' => 'Test Title',
+            'website' => ''
+        ];
+        $listing = new ListingBasic($data);
+        $this->assertEquals($data['website'], $listing->getWebsite());
+    }
+    /** @test */
+    function createdListingWebsiteAddsHttp()
+    {
+        $data = [
+            'id' => 1,
+            'title' => 'Test Title',
+            'website' => 'testwebsite.com'
+        ];
+        $listing = new ListingBasic($data);
+        $this->assertEquals('http://testwebsite.com', $listing->getWebsite());
+    }
+    /** @test */
+    function hasEmptyStatus()
+    {
+        $data = [
+            'id' => 1,
+            'title' => 'Test Title',
+            'status' => ''
+        ];
+        $listing = new ListingBasic($data);
+        $this->assertEquals('basic', $listing->getStatus());
+    }
+    /** @test */
+    function hasBasicStatusAlreadySet()
+    {
+        $data = [
+            'id' => 1,
+            'title' => 'Test Title',
+            'status' => 'basic'
+        ];
+        $listing = new ListingBasic($data);
+        $this->assertEquals('basic', $listing->getStatus());
+    }
 }
