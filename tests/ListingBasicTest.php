@@ -103,7 +103,8 @@ class ListingBasicTest extends TestCase
             'title' => 'Test Title',
             'website' => 'http://testwebsite.com',
             'email' => 'test@email.com',
-            'twitter' => '@test'
+            'twitter' => '@test',
+            'image' => 'https://www.cascadiaphp.com/images/logo.svg'
         ];
         $listing = new ListingBasic($data);
         $this->assertEquals(
@@ -113,7 +114,8 @@ class ListingBasicTest extends TestCase
                 'website' => 'http://testwebsite.com',
                 'email' => 'test@email.com',
                 'twitter' => 'test',
-                'status' => 'basic'
+                'status' => 'basic',
+                'image' => 'https://www.cascadiaphp.com/images/logo.svg'
             ],
             $listing->toArray()
         );
