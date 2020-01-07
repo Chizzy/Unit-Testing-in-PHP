@@ -34,6 +34,8 @@ class ListingImageTest extends TestCase
     }
     public function testBuildPathImage()
     {
+        // Thank you Jennifer Nordell for this tidbit 😁.
+        define('BASE_URL', '/');
         $data = [
             'id' => 1,
             'title' => 'Test Title',
