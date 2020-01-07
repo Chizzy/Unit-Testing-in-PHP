@@ -95,4 +95,27 @@ class ListingBasicTest extends TestCase
         $listing = new ListingBasic($data);
         $this->assertEquals('test', $listing->getTwitter());
     }
+    /** @test */
+    function createdListingBecomesValidArray()
+    {
+        $data = [
+            'id' => 1,
+            'title' => 'Test Title',
+            'website' => 'http://testwebsite.com',
+            'email' => 'test@email.com',
+            'twitter' => '@test'
+        ];
+        $listing = new ListingBasic($data);
+        $this->assertEquals(
+            [
+                'id' => '1',
+                'title' => 'Test Title',
+                'website' => 'http://testwebsite.com',
+                'email' => 'test@email.com',
+                'twitter' => 'test',
+                'status' => 'basic'
+            ],
+            $listing->toArray()
+        );
+    }
 }
